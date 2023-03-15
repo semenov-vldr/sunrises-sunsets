@@ -1,0 +1,361 @@
+.header
+
+  &__container
+    position: relative
+    display: grid
+    grid-template-columns: repeat(3, auto)
+    align-items: center
+    justify-content: space-between
+    column-gap: 36px
+    color: $text-light
+    padding-top: 26px
+    padding-bottom: 26px
+    white-space: nowrap
+    @media (max-width: 1600px)
+      column-gap: 24px
+    @media (max-width: 1400px)
+      column-gap: 20px
+      padding-top: 20px
+      padding-bottom: 20px
+    @media (max-width: 980px)
+      grid-template-columns: repeat(2, auto)
+      grid-template-rows: repeat(2, auto)
+      padding-top: 16px
+      padding-bottom: 0
+    //a:hover
+    //  color: $text-crimson
+    &::after
+      content: ""
+      position: absolute
+      bottom: 0
+      left: 50%
+      transform: translateX(-50%)
+      right: 0
+      width: calc(100% - 160px)
+      height: 1px
+      background-color: #FFFCFA59
+      @media (max-width: $width-tablet)
+        width: calc(100% - 100px)
+      @media (max-width: 980px)
+        display: none
+
+  &__logo
+    display: flex
+    align-items: center
+    gap: 12px
+    @media (max-width: 1400px)
+      gap: 8px
+  &__logo-icon
+    &--animated
+      animation: spin 4s infinite linear
+    @keyframes spin
+      100%
+        transform: rotate(360deg)
+    @media (max-width: 1400px)
+      width: 55px
+      height: 55px
+    @media (max-width: 1000px)
+      width: 50px
+      height: 50px
+    @media (max-width: 480px)
+      display: none
+
+  &__logo-icon-mobile
+    display: none
+    @media (max-width: 480px)
+      display: block
+
+
+
+  &__nav
+    //position: relative
+    @media (max-width: 980px)
+      grid-column: 1/-1
+      grid-row: 2/3
+      overflow: hidden
+      margin: 16px -50px 0
+      padding: 16px 50px
+      &::after,
+      &::before
+        content: ""
+        position: absolute
+        left: -50px
+        width: 120%
+        height: 1px
+        background-color: #FFFCFA59
+      &::after
+        bottom: 0
+      &::before
+        top: 0
+    @media (max-width: 480px)
+      font-size: 14px
+
+  &__nav-list
+    display: flex
+    column-gap: 36px
+    align-items: center
+    @media (max-width: 1600px)
+      column-gap: 16px
+    @media (max-width: 980px)
+      overflow: scroll
+      column-gap: 26px
+
+  &__nav-item--search
+    display: none
+    @media (max-width: 980px)
+      display: block
+
+  &__nav-link
+    position: relative
+    &::before
+      content: ""
+      position: absolute
+      bottom: -4px
+      left: 0
+      width: 0
+      height: 1px
+      background-color: currentColor
+      opacity: 0.4
+      transition: $transition
+    &:hover::before
+      width: 100%
+
+
+  &__right-col
+    display: flex
+    column-gap: 36px
+    align-items: center
+    margin-left: auto
+    @media (max-width: 1600px)
+      column-gap: 16px
+    @media (max-width: 980px)
+      grid-column: 2/3
+      column-gap: 36px
+      padding-right: 16px
+
+  &__weather
+    display: flex
+    align-items: center
+    column-gap: 20px
+    @media (max-width: 980px)
+      column-gap: 36px
+
+  &__weather-item
+    display: flex
+    align-items: center
+    gap: 10px
+  &__weather-item--sun-moon
+    margin-left: 20px
+    @media (max-width: 1600px)
+      margin-left: 16px
+    @media (max-width: 1400px)
+      margin-left: 0
+
+  &__weather-item--water
+    @media (max-width: 1400px)
+      display: none
+
+  &__weather-item-value--clouds
+    @media (max-width: 1400px)
+      display: none
+
+
+  &__tel-icon
+    display: none
+    @media (max-width: 1100px)
+      display: block
+
+  &__tel:hover .header__tel-subnav
+    visibility: visible
+    opacity: 1
+
+  &__tel-subnav
+    position: absolute
+    bottom: 0
+    transform: translateY(100%)
+    right: 80px
+    border-radius: 8px
+    padding: 32px
+    background-color: $accent
+    transition: $transition
+    visibility: hidden
+    opacity: 0
+    &::before
+      content: ""
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 50px
+      transform: translateY(-100%)
+
+
+  &__tel-subnav-box
+    display: flex
+    flex-direction: column
+    gap: 32px
+
+  &__tel-subnav-title
+    @include fontSize(18, 22)
+    text-transform: uppercase
+    color: #404040
+
+  &__tel-subnav-list
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    grid-gap: 32px 48px
+
+  &__tel-subnav-item
+    display: flex
+    flex-direction: column
+    gap: 4px
+    &-title
+      width: fit-content
+      text-transform: uppercase
+      color: #404040
+      opacity: 0.6
+      font-size: 13px
+    &-tel
+      width: fit-content
+      color: rgba($text-basic, 0.9)
+      position: relative
+      &::before
+        content: ""
+        position: absolute
+        bottom: -4px
+        left: 0
+        width: 0
+        height: 1px
+        background-color: currentColor
+        opacity: 0.4
+        transition: $transition
+      &:hover::before
+        width: 100%
+
+
+  &__tel-link .header__tel-link-text
+    position: relative
+    &::before
+      content: ""
+      position: absolute
+      bottom: -4px
+      left: 0
+      width: 0
+      height: 1px
+      background-color: currentColor
+      opacity: 0.4
+      transition: $transition
+    &:hover::before
+      width: 85%
+
+    @media (max-width: 1100px)
+      display: none
+
+
+  &__button-search
+    background-color: rgba(170, 194, 203, 0.41)
+    background-blend-mode: multiply
+    backdrop-filter: blur(6px)
+    color: $text-light
+    font-size: 14px
+    @media (max-width: 1100px)
+      padding: 12px 16px
+    @media (max-width: 980px)
+      display: none
+
+  //------header subnav---------
+  &__subnav
+    //display: none
+    width: calc(100% - 160px)
+    position: absolute
+    bottom: 0
+    left: 50%
+    transform: translate(-50%, 100%)
+    border-radius: 8px
+    padding: 32px
+    background-color: $accent
+    transition: $transition
+    color: $text-basic
+
+  &__subnav-box
+    display: grid
+    grid-template-columns: 19% auto
+    grid-gap: 40px
+    @media (max-width: 1500px)
+      grid-gap: 30px
+
+  &__subnav-desc
+    display: flex
+    flex-direction: column
+    gap: 16px
+    height: 100%
+    white-space: initial
+    &-text
+      opacity: 0.5
+    &-button
+      padding: 16px 24px
+      margin-top: auto
+    @media (max-width: 1500px)
+      gap: 8px
+
+  &__subnav-links
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr 20%
+    gap: 16px 40px
+    @media (max-width: 1500px)
+      gap: 8px 30px
+    @media (max-width: 1300px)
+      grid-template-columns: 1fr 1fr 190px
+
+
+
+  &__subnav-links-item--w-img
+    display: flex
+    flex-direction: column
+    grid-row: span 5
+    @media (max-width: 1300px)
+      &:nth-child(3)
+        display: inline-block
+        grid-row: initial
+        .header__subnav-links-item-img-box
+          display: none
+
+  &__subnav-links-item-img-box
+    position: relative
+    width: 100%
+    height: 240px
+    overflow: hidden
+    img
+      transition: $transition
+      position: absolute
+      width: 100%
+      height: 100%
+      object-fit: cover
+
+  &__subnav-links-item-text
+    position: relative
+    width: fit-content
+    &::before
+      content: ""
+      position: absolute
+      bottom: -4px
+      left: 0
+      width: 0
+      height: 1px
+      background-color: currentColor
+      opacity: 0.4
+      transition: $transition
+
+  &__subnav-links-item
+    &:hover img
+      transform: scale(1.05)
+
+    &:hover .header__subnav-links-item-text::before
+      width: 100%
+
+
+
+
+
+
+

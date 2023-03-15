@@ -1,0 +1,176 @@
+html
+  overflow-x: hidden
+  max-width: 100vw
+  scroll-behavior: smooth
+  //background-color: $bg-base
+  background-color: rgb(147, 147, 147)
+  color: $text-basic
+
+body
+  min-height: 100vh
+
+body.js-block-scroll
+  position: fixed
+
+
+.page
+  overflow: clip
+  min-height: 100vh
+  display: flex
+  flex-direction: column
+  min-width: 100%
+
+main
+  flex-grow: 1
+
+.container
+  max-width: 1760px
+  min-width: 280px
+  padding: 0 80px
+  margin: 0 auto
+  box-sizing: content-box
+  @media (max-width: 1200px)
+    padding: 0 50px
+  @media (max-width: 768px)
+    padding: 0 12px
+
+
+.hidden
+  display: none
+
+.visually-hidden
+  position: absolute
+  width: 1px
+  height: 1px
+  margin: -1px
+  border: 0
+  padding: 0
+  white-space: nowrap
+  clip-path: inset(100%)
+  clip: rect(0 0 0 0)
+  overflow: hidden
+
+
+.section-column
+  display: flex
+  flex-direction: column
+  gap: 160px
+  @media (max-width: 768px)
+    gap: 90px
+
+
+.title-section
+  font-size: clamp(24px, calc(24px + (56 - 24) * ((100vw - 768px) / (1920 - 768))), 56px)
+  font-weight: 500
+  text-align: center
+  margin-bottom: clamp(28px, calc(28px + (80 - 28) * ((100vw - 768px) / (1920 - 768))), 80px)
+
+// ----Button-----
+.button
+  padding: 16px 32px
+  width: fit-content
+  height: fit-content
+  border-radius: 8px
+  line-height: 1
+  letter-spacing: 0.03em
+  text-transform: uppercase
+  cursor: pointer
+  text-align: center
+  &--basic
+    color: $text-basic
+    border: 1px solid currentColor
+    &:hover
+      background-color: $accent_2
+      color: $text-light
+
+
+.arrow-link
+  position: relative
+  display: flex
+  gap: 7px
+  align-items: center
+  &::after
+    content: ""
+    display: inline-block
+    width: 6px
+    height: 6px
+    border-top: 2px solid currentColor
+    border-right: 2px solid currentColor
+    margin-right: 2px
+    transform: rotate(135deg)
+    margin-bottom: 4px
+    transition: $transition
+  &:hover::after
+    transform: rotate(135deg) scale(-1, -1)
+    margin-bottom: 0
+    margin-top: 4px
+
+
+
+.flex-center
+  display: flex
+  align-items: center
+  justify-content: center
+
+
+.tablet-hidden
+  @media (max-width: $width-mobile)
+    display: none
+
+.desctop-hidden
+  @media (min-width: $width-mobile)
+    display: none
+
+
+
+
+// -------- Swiper -----------
+
+.swiper
+  width: 100%
+
+.swiper-slide
+  height: auto
+
+.swiper-pagination
+  position: relative
+
+//.swiper-pagination-bullet
+//  width: 6px
+//  height: 6px
+//  background-color: rgba($white, 0.4)
+//  transition: 0.4s ease-out
+//  &-active
+//    background-color: $white
+
+// стрелки навигации
+//.slider-nav__prev,
+//.slider-nav__next
+//  position: absolute
+//  display: inline-flex
+//  align-items: center
+//  justify-content: center
+//  width: 32px
+//  aspect-ratio: 1 / 1
+//  border-radius: 4px
+//  cursor: pointer
+//  z-index: 1
+//  background: rgba(106, 106, 106, 0.1) no-repeat center / 7px 12px
+//  top: 50%
+//  transform: translateY(-50%)
+//  &:hover
+//    background-color: rgba(106, 106, 106, 0.3)
+//.slider-nav__prev
+//  background-image: url('../img/icons/arrow-left.svg')
+//  transform: translateX(-100%)
+//.slider-nav__next
+//  background-image: url('../img/icons/arrow-right.svg')
+//  transform: translateX(100%)
+
+.swiper-pagination
+  margin-top: 30px
+
+
+
+
+
