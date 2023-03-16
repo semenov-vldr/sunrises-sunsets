@@ -12,8 +12,8 @@ header.header
       ul.header__nav-list
         li.header__nav-item
           a.header__nav-link(href="##") Номера
-        li.header__nav-item.arrow-linkk
-          a.header__nav-link(href="##") Об отеле
+        li.header__nav-item
+          a.header__nav-link.arrow-link(href="##") Об отеле
           // SubNav "Об отеле"
           .header__subnav.header__subnav--about
             .header__subnav-box
@@ -47,13 +47,38 @@ header.header
 
 
 
+        li.header__nav-item
+          a.header__nav-link.arrow-link(href="##") Инфраструктура
+          // SubNav "Инфраструктура"
+          .header__subnav.header__subnav--infrastructure
+            .header__subnav-box
+              .header__subnav-desc
+                h2.header__subnav-desc-title Инфраструктура
+                p.header__subnav-desc-text Развитая инфраструктура комплекса, обслуживание по системе «All inclusive», а также высокий уровень сервиса сделали “Рассветы Закаты” одним из самых востребованных курортов Крыма.
+                a.button.button--basic.header__subnav-desc-button(href="##") Узнать больше
+              .header__subnav-links
+                a.header__subnav-links-item.header__subnav-links-item--w-img(href="##")
+                  .header__subnav-links-item-img-box
+                    img(src="./assets/img/header/04.jpg")
+                  span.header__subnav-links-item-text Wellness
+                a.header__subnav-links-item.header__subnav-links-item--w-img(href="##")
+                  .header__subnav-links-item-img-box
+                    img(src="./assets/img/header/05.jpg")
+                  span.header__subnav-links-item-text Бары и рестораны
+                a.header__subnav-links-item.header__subnav-links-item--w-img(href="##")
+                  .header__subnav-links-item-img-box
+                    img(src="./assets/img/header/06.jpg")
+                  span.header__subnav-links-item-text Аквапарк
+                a.header__subnav-links-item.header__subnav-links-item--simple(href="##")
+                  span.header__subnav-links-item-text Для детей
+                a.header__subnav-links-item.header__subnav-links-item--simple(href="##")
+                  span.header__subnav-links-item-text Спорт и активный отдых
+                a.header__subnav-links-item.header__subnav-links-item--simple(href="##")
+                  span.header__subnav-links-item-text Услуги и сервисы
+                a.header__subnav-links-item.header__subnav-links-item--simple(href="##")
+                  span.header__subnav-links-item-text Организация мероприятий
 
 
-
-
-
-        li.header__nav-item.arrow-linkk
-          a.header__nav-link(href="##") Инфраструктура
         li.header__nav-item
           a.header__nav-link(href="##") Акции
         li.header__nav-item
@@ -66,7 +91,7 @@ header.header
         li.header__weather-item.header__weather-item--water
           svg.header__weather-item-icon(width="24" height="10" fill="currentColor")
             use(href='./assets/img/sprite.svg#weather-water')
-          span.header__weather-item-value 24 °C
+          span.header__weather-item-value.header__weather-item-value--water 09 °C
 
         li.header__weather-item
           svg.header__weather-item-icon(width="22" height="16" stroke="currentColor")
@@ -86,7 +111,7 @@ header.header
             use(href='./assets/img/sprite.svg#phone')
         .header__tel-subnav
           .header__tel-subnav-box
-            span.header__tel-subnav-title Телефоны
+            h2.header__tel-subnav-title Телефоны
             ul.header__tel-subnav-list
               li.header__tel-subnav-item
                 span.header__tel-subnav-item-title Бесплатно по РФ:

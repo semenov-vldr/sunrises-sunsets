@@ -43,6 +43,7 @@
     display: flex
     align-items: center
     gap: 12px
+    width: fit-content
     @media (max-width: 1400px)
       gap: 8px
   &__logo-icon
@@ -97,8 +98,13 @@
     @media (max-width: 1600px)
       column-gap: 16px
     @media (max-width: 980px)
-      overflow: scroll
+      overflow-x: auto
       column-gap: 26px
+      -ms-overflow-style: none
+      scrollbar-width: none
+      &::-webkit-scrollbar
+        width: 0
+        height: 0
 
   &__nav-item:hover .header__subnav
     visibility: visible
@@ -121,8 +127,13 @@
       background-color: currentColor
       opacity: 0.4
       transition: $transition
+      @media (max-width: 980px)
+        bottom: 0
     &:hover::before
       width: 100%
+    &.arrow-link:hover::before
+      width: calc(100% - 30px)
+
 
 
   &__right-col
@@ -141,6 +152,7 @@
     display: flex
     align-items: center
     column-gap: 20px
+    user-select: none
     @media (max-width: 980px)
       column-gap: 36px
 
@@ -162,6 +174,9 @@
   &__weather-item-value--clouds
     @media (max-width: 1400px)
       display: none
+
+  &__weather-item-value
+    font-family: "RobotoCondensed", sans-serif
 
 
   &__tel-icon
@@ -188,13 +203,22 @@
       content: ""
       position: absolute
       top: 0
-      left: 0
-      width: 100%
+      left: 60%
+      width: 30%
       height: 50px
-      transform: translateY(-100%)
+      transform: translate(-50%, -100%)
+      @media (max-width: 1400px)
+        height: 40px
+      @media (max-width: 1100px)
+        height: 37px
+        transform: translateY(-100%)
+        width: 8%
+        left: 72%
+      @media (max-width: 980px)
+        display: none
     @media (max-width: $width-tablet)
       right: 50px
-    @media (max-width: $width-mobile)
+    @media (max-width: 980px)
       bottom: -12px
       left: 50%
       right: 0
@@ -208,6 +232,7 @@
     gap: 32px
 
   &__tel-subnav-title
+    font-family: "Wremena", sans-serif
     @include fontSize(18, 22)
     text-transform: uppercase
     color: #404040
@@ -264,7 +289,7 @@
       opacity: 0.4
       transition: $transition
     &:hover::before
-      width: 85%
+      width: calc(100% - 30px)
     @media (max-width: 1100px)
       display: none
 
@@ -314,6 +339,10 @@
       width: 100%
       height: 50px
       transform: translateY(-100%)
+      @media (max-width: 1400px)
+        height: 38px
+      @media (max-width: 980px)
+        display: none
 
   &__subnav-box
     display: grid
@@ -335,6 +364,11 @@
     gap: 16px
     height: 100%
     white-space: initial
+    &-title
+      font-family: "Wremena", sans-serif
+      @include fontSize(18, 22)
+      text-transform: uppercase
+      color: #404040
     &-text
       opacity: 0.5
     &-button
@@ -371,6 +405,7 @@
   &__subnav-links-item--w-img
     display: flex
     flex-direction: column
+    gap: 8px
     grid-row: 1 / span 5
     @media (max-width: 1300px)
       &:nth-child(3)

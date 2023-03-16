@@ -1,0 +1,81 @@
+footer.footer
+  .footer__container.container
+    .footer__contacts
+      a.footer__logo(href="index.html")
+        svg.footer__logo-icon(width="90" height="90" fill="#404040")
+          use(href='./assets/img/sprite.svg#logo-icon')
+        svg.footer__logo-icon(width="92" height="92" fill="#404040")
+          use(href='./assets/img/sprite.svg#logo-animated')
+
+      ul.footer__contacts-list
+        li.footer__contacts-item
+          span.footer__contacts-title Телефон
+          a.footer__contacts-value(href="tel:88003333125") 8 800 3333 125
+        li.footer__contacts-item
+          span.footer__contacts-title Адрес
+          span.footer__contacts-value ул. Набережная 2, с. Песчаное, <br> Бахчисарайский р-н, Крым
+        li.footer__contacts-item
+          span.footer__contacts-title e-mail
+          a.footer__contacts-value(href="##") info@rassvetyzakaty
+        li.footer__contacts-item
+          a.footer__contacts-link-go(href="##") как добраться
+
+    nav.footer__menu
+      ul.footer__menu-list
+        li.footer__menu-item
+          span.footer__menu-title Навигация
+        li.footer__menu-item
+          a.footer__menu-link(href="##") Номера
+        li.footer__menu-item
+          a.footer__menu-link(href="##") Услуги
+        li.footer__menu-item
+          a.footer__menu-link(href="##") Аренда площадок
+        li.footer__menu-item
+          a.footer__menu-link(href="##") Организация мероприятий
+        li.footer__menu-item
+          a.footer__menu-link(href="##") Юридическая информация
+
+
+      ul.footer__menu-list
+        li.footer__menu-item
+          span.footer__menu-title Инфраструктура
+        li.footer__menu-item
+          a.footer__menu-link(href="##") Медицина
+        li.footer__menu-item
+          a.footer__menu-link(href="##") SPA-зона
+        li.footer__menu-item
+          a.footer__menu-link(href="##") Аквапарк
+        li.footer__menu-item
+          a.footer__menu-link(href="##") Бассейны
+        li.footer__menu-item
+          a.footer__menu-link(href="##") Бары и рестораны
+        li.footer__menu-item
+          a.footer__menu-link(href="##") Спорт и активный отдых
+
+      ul.footer__menu-list
+        li.footer__menu-item
+          span.footer__menu-title Об отеле
+        li.footer__menu-item
+          a.footer__menu-link(href="##") Фотогалерея
+        li.footer__menu-item
+          a.footer__menu-link(href="##") Территория
+        li.footer__menu-item
+          a.footer__menu-link(href="##") Места рядом
+        li.footer__menu-item
+          a.footer__menu-link(href="##") Новости и мероприятия
+        li.footer__menu-item
+          a.footer__menu-link(href="##") Вакансии
+        li.footer__menu-item
+          a.footer__menu-link(href="##") Блог
+        li.footer__menu-item
+          a.footer__menu-link(href="##") MICE
+
+    .footer__feedback
+      .footer__feedback-title Вдохновение <br> внутри
+      p.footer__feedback-text Оставьте заявку, чтобы получать новости об эксклюзивных предложениях, событиях, новых направлениях и многом другом, пожалуйста.
+
+      form.footer__feedback-form
+        label.footer__feedback-form-label(for="email")
+          span ваш e-mail*
+          input.footer__feedback-form-field(id="email" type="email" placeholder="example@email.com")
+        button.button.button--basic(type="submit") подписаться

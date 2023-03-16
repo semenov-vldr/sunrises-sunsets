@@ -1,0 +1,136 @@
+.footer
+  background-color: $accent
+  padding: 96px 0
+
+
+  &__container
+    display: grid
+    grid-template-columns: 1fr 1fr
+
+  &__contacts
+    padding-bottom: 64px
+    display: flex
+    padding-right: 80px
+    justify-content: space-between
+    gap: 40px
+    @media (max-width: 1500px)
+      padding-right: 40px
+
+  &__contacts-list
+    display: grid
+    grid-template-columns: repeat(2, auto)
+    grid-gap: 8px 24px
+
+  &__contacts-item
+    display: flex
+    flex-direction: column
+    gap: 4px
+
+  &__contacts-title
+    text-transform: uppercase
+    color: rgba(#404040, 0.6)
+    font-size: 13px
+
+  &__contacts-link-go
+    position: relative
+    text-transform: uppercase
+    color: rgba($text-basic, 0.7)
+    font-size: 14px
+    letter-spacing: 0.03em
+    width: fit-content
+    margin-top: auto
+    &::after
+      content: ""
+      position: absolute
+      width: 100%
+      height: 1px
+      background-color: currentColor
+      opacity: 0.4
+      bottom: -4px
+      left: 0
+
+
+  &__logo
+    display: flex
+    align-items: center
+    gap: 20px
+
+
+
+  &__menu
+    grid-column: 1/2
+    grid-row: 2/3
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    grid-gap: 40px
+    padding-top: 64px
+    border-top: 1px solid rgba(#404040, 0.1)
+    padding-right: 80px
+    @media (max-width: 1500px)
+      padding-right: 40px
+
+  &__menu-list
+    display: flex
+    flex-direction: column
+    gap: 20px
+
+  &__menu-title
+    font-family: "Wremena", sans-serif
+    text-transform: uppercase
+    font-size: 18px
+    opacity: 0.5
+
+
+
+
+
+  &__feedback
+    grid-row: 1/3
+    display: flex
+    flex-direction: column
+    justify-content: center
+    padding-left: 80px
+    @media (max-width: 1500px)
+      padding-left: 40px
+
+  &__feedback-title
+    @include fontSize(34, 72)
+    font-family: "Wremena", sans-serif
+    margin-bottom: 24px
+    text-transform: uppercase
+
+
+  &__feedback-text
+    @include fontSize(16, 24)
+    margin-bottom: 56px
+
+  &__feedback-form
+    display: flex
+    gap: 24px
+    width: 100%
+    justify-content: space-between
+    align-items: flex-end
+    @media (max-width: 1300px)
+      flex-direction: column
+
+
+  &__feedback-form-label
+    width: 100%
+    span
+      text-transform: uppercase
+      font-size: 13px
+      letter-spacing: 0.05em
+      color: #2A282799
+
+
+  &__feedback-form-field
+    margin-top: 16px
+    border: none
+    outline: none
+    background-color: transparent
+    border-bottom: 1px solid #6A696880
+    width: 100%
+    &::placeholder
+      color: #6A696880
+      font-size: 18px
+
