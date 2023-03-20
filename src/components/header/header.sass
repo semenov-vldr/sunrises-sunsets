@@ -2,28 +2,22 @@
 
   &__container
     position: relative
-    display: grid
-    grid-template-columns: repeat(3, auto)
+    display: flex
     align-items: center
     justify-content: space-between
     column-gap: 36px
     color: $text-light
-    padding-top: 26px
-    padding-bottom: 26px
+    padding-top: 16px
+    padding-bottom: 16px
     white-space: nowrap
     @media (max-width: 1600px)
       column-gap: 24px
     @media (max-width: 1400px)
       column-gap: 20px
-      padding-top: 20px
-      padding-bottom: 20px
     @media (max-width: 980px)
       grid-template-columns: repeat(2, auto)
       grid-template-rows: repeat(2, auto)
-      padding-top: 16px
       padding-bottom: 0
-    //a:hover
-    //  color: $text-crimson
     &::after
       content: ""
       position: absolute
@@ -69,7 +63,7 @@
 
 
   &__nav
-    //position: relative
+    margin-right: auto
     @media (max-width: 980px)
       grid-column: 1/-1
       grid-row: 2/3
@@ -187,6 +181,9 @@
   &__tel:hover .header__tel-subnav
     visibility: visible
     opacity: 1
+
+  &__tel-link
+    cursor: pointer
 
   &__tel-subnav
     position: absolute

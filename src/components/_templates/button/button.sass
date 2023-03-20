@@ -1,0 +1,72 @@
+.button
+  position: relative
+  padding: 16px 32px
+  width: fit-content
+  height: fit-content
+  border-radius: 8px
+  line-height: 1.4
+  letter-spacing: 0.03em
+  text-transform: uppercase
+  cursor: pointer
+  font-size: 14px
+  display: flex
+  align-items: center
+  justify-content: center
+  white-space: nowrap
+  transition: 0.25s ease-out
+  border: 1px solid transparent
+  span
+    color: inherit
+    line-height: 1.4
+    text-align: center
+    font-weight: 400
+
+
+  // Темный фон
+  &.button-filled
+    background-color: $filled-bgc-dark
+    color: $text-light
+    &:hover,
+    &:focus,
+    &:active
+      background-color: $filled-bgc-accent
+
+  &.button-accent
+    background-color: $filled-bgc-accent
+    color: $text-light
+    &:hover,
+    &:focus,
+    &:active
+      background-color: $filled-bgc-accent-hover
+
+  &.button-outlined-dark
+    background-color: transparent
+    color: $text-basic
+    border: 1px solid $text-basic
+    &:hover,
+    &:focus,
+    &:active
+      background-color: $accent_2
+      color: $text-light
+      border-color: $accent_2
+
+
+
+  // Светлый фон
+  &.button-accent_2
+    background-color: $accent_2
+    color: $text-light
+    &:hover,
+    &:focus,
+    &:active
+      background-color: $accent_2-hover
+
+  &.button-outlined-light
+    background-color: transparent
+    color: $text-light
+    border: 1px solid $text-light
+    &:hover,
+    &:focus,
+    &:active
+      background-color: $filled-bgc-accent
+      border-color: $filled-bgc-accent
