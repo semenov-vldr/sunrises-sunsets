@@ -1,12 +1,14 @@
 header.header
   .header__container.container
 
+
     a.header__logo(href="index.html")
-      svg.header__logo-icon.header__logo-icon--static(width="72" height="72" fill="#FFFAF4")
+      svg.header__logo-icon.header__logo-icon--static(width="72" height="72" fill="#2A2827E5")
         use(href='./assets/img/sprite.svg#logo-icon')
-      svg.header__logo-icon.header__logo-icon--animated(width="73" height="72" fill="#FFFAF4")
+      svg.header__logo-icon.header__logo-icon--animated(width="73" height="72" fill="#2A2827E5")
         use(href='./assets/img/sprite.svg#logo-animated')
-      img.header__logo-icon-mobile(src="./assets/img/logo-mobile.svg")
+      svg.header__logo-icon-mobile(width="76" height="24" fill="#2A2827E5")
+        use(href='./assets/img/sprite.svg#logo-mobile')
 
     nav.header__nav
       ul.header__nav-list
@@ -20,7 +22,7 @@ header.header
               .header__subnav-desc
                 h2.header__subnav-desc-title Об отеле
                 p.header__subnav-desc-text Ознакомьтесь с красотой и комфортом нашего отеля изнутри: от пышного окружения нашей роскошной территории до последних новостей и интересных событий на территории отеля.
-                a.button.button--basic.header__subnav-desc-button(href="##") Узнать больше
+                a.button.button-outlined.button-primary.header__subnav-desc-button(href="##") Узнать больше
               .header__subnav-links
                 a.header__subnav-links-item.header__subnav-links-item--w-img(href="##")
                   .header__subnav-links-item-img-box
@@ -55,7 +57,7 @@ header.header
               .header__subnav-desc
                 h2.header__subnav-desc-title Инфраструктура
                 p.header__subnav-desc-text Развитая инфраструктура комплекса, обслуживание по системе «All inclusive», а также высокий уровень сервиса сделали “Рассветы Закаты” одним из самых востребованных курортов Крыма.
-                a.button.button--basic.header__subnav-desc-button(href="##") Узнать больше
+                a.button.button-outlined.button-primary.header__subnav-desc-button(href="##") Узнать больше
               .header__subnav-links
                 a.header__subnav-links-item.header__subnav-links-item--w-img(href="##")
                   .header__subnav-links-item-img-box
@@ -132,12 +134,10 @@ header.header
                 span.header__tel-subnav-item-title Вакансии:
                 a.header__tel-subnav-item-tel(href="tel:+79789140070") +7 978 914 00 70
 
-            button.button.button--basic.header__tel-subnav-button заказать звонок
+            button.button.button-outlined.button-primary.header__tel-subnav-button заказать звонок
 
 
-      a.button.button-filled.button-accent.button-dark.header__button-search(href="##") Найти номер
-
-
+      a.button.button-filled.button-accent.header__button-search(href="##") Найти номер
 
 
 

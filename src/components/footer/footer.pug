@@ -8,16 +8,16 @@ footer.footer
           use(href='./assets/img/sprite.svg#logo-animated')
 
       ul.footer__contacts-list
-        li.footer__contacts-item
+        li.footer__contacts-item.footer__contacts-item--tel
           span.footer__contacts-title Телефон
           a.footer__contacts-value(href="tel:88003333125") 8 800 3333 125
-        li.footer__contacts-item
+        li.footer__contacts-item.footer__contacts-item--address
           span.footer__contacts-title Адрес
           span.footer__contacts-value ул. Набережная 2, с. Песчаное, <br> Бахчисарайский р-н, Крым
-        li.footer__contacts-item
+        li.footer__contacts-item.footer__contacts-item--email
           span.footer__contacts-title e-mail
           a.footer__contacts-value(href="##") info@rassvetyzakaty
-        li.footer__contacts-item
+        li.footer__contacts-item.footer__contacts-item--link
           a.footer__contacts-link-go(href="##") как добраться
 
     nav.footer__menu
@@ -72,11 +72,16 @@ footer.footer
             a.footer__menu-link(href="##") MICE
 
     .footer__feedback
-      .footer__feedback-title Вдохновение <br> внутри
-      p.footer__feedback-text Оставьте заявку, чтобы получать новости об эксклюзивных предложениях, событиях, новых направлениях и многом другом, пожалуйста.
 
-      form.footer__feedback-form
-        label.footer__feedback-form-label(for="email")
-          span ваш e-mail*
-          input.footer__feedback-form-field(id="email" type="email" placeholder="example@email.com")
-        button.button.button--basic(type="submit") подписаться
+      video.footer__feedback-video(preload='auto' autoplay muted loop playsinline)
+        source(src='./assets/video/feedback-video.mp4' type='video/mp4')
+
+      .footer__feedback-content
+        .footer__feedback-title Вдохновение <br> внутри
+        p.footer__feedback-text Оставьте заявку, чтобы получать новости об эксклюзивных предложениях, событиях, новых направлениях и многом другом, пожалуйста.
+
+        form.footer__feedback-form
+          label.footer__feedback-form-label(for="email")
+            span ваш e-mail*
+            input.footer__feedback-form-field(id="email" type="email" placeholder="example@email.com")
+          button.button.button-outlined.button-primary.footer__feedback-submit(type="submit") подписаться
