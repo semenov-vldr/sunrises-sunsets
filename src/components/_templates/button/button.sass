@@ -22,51 +22,112 @@
     font-weight: 400
 
 
-  // Темный фон
-  &.button-filled
-    background-color: $filled-bgc-dark
+
+  &.button-filled.button-accent.button-light
+    background-color: $accent-light
     color: $text-light
     &:hover,
     &:focus,
     &:active
-      background-color: $filled-bgc-accent
+      background-color: $accent-light-hover
 
-  &.button-accent
-    background-color: $filled-bgc-accent
+  &.button-filled.button-secondary.button-light,
+  &.button-filled.button-primary.button-light
+    background-color: $primary-light
     color: $text-light
     &:hover,
     &:focus,
     &:active
-      background-color: $filled-bgc-accent-hover
+      background-color: $primary-light-hover
 
-  &.button-outlined-dark
-    background-color: transparent
+  //---------------------
+
+  &.button-filled.button-accent.button-dark
+    background-color: $accent-dark
+    color: $text-light
+    &:hover,
+    &:focus,
+    &:active
+      background-color: $accent-dark-hover
+
+  &.button-filled.button-secondary.button-dark,
+  &.button-filled.button-primary.button-dark
+    background-color: $primary-dark
+    color: $text-light
+    &:hover,
+    &:focus,
+    &:active
+      background-color: $primary-dark-hover
+
+
+  //---------------------
+
+  &.button-outlined.button-secondary.button-light,
+  &.button-outlined.button-primary.button-light
     color: $text-basic
     border: 1px solid $text-basic
     &:hover,
     &:focus,
     &:active
-      background-color: $accent_2
+      background-color: $primary-light-hover
+      border-color: $primary-light-hover
       color: $text-light
-      border-color: $accent_2
 
 
+  // ------------------
 
-  // Светлый фон
-  &.button-accent_2
-    background-color: $accent_2
+  &.button-outlined.button-secondary.button-dark,
+  &.button-outlined.button-primary.button-dark
     color: $text-light
+    border: 1px solid $outline-primary-dark
     &:hover,
     &:focus,
     &:active
-      background-color: $accent_2-hover
+      background-color: $outline-primary-dark-hover
+      border-color: $outline-primary-dark-hover
 
-  &.button-outlined-light
-    background-color: transparent
-    color: $text-light
-    border: 1px solid $text-light
+  &.button-link.button-accent.button-light,
+  &.button-link.button-secondary.button-light,
+  &.button-link.button-primary.button-light
+    padding: 0
+    color: rgba($text-basic, 0.7)
     &:hover,
     &:focus,
     &:active
-      background-color: $filled-bgc-accent
-      border-color: $filled-bgc-accent
+      color: $text-basic
+      &::after
+        background-color: #2A2827E5
+    &::after
+      content: ""
+      position: absolute
+      bottom: -2px
+      width: 100%
+      height: 1px
+      background-color: rgba($text-basic, 0.4)
+      opacity: 0.4
+
+  &.button-link.button-accent.button-dark,
+  &.button-link.button-secondary.button-dark,
+  &.button-link.button-primary.button-dark
+    padding: 0
+    color: rgba($text-light, 0.8)
+    &:hover,
+    &:focus,
+    &:active
+      color: $text-light
+      &::after
+        background-color: $text-light
+    &::after
+      content: ""
+      position: absolute
+      bottom: -2px
+      width: 100%
+      height: 1px
+      background-color: rgba($text-light, 0.4)
+      opacity: 0.4
+
+
+
+
+
+
