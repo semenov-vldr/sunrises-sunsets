@@ -53,17 +53,42 @@ if (header) {
 
 
 
-  // const navLinksSubNav = header.querySelectorAll('.header__nav-link.arrow-link, .header__tel');
-  //
-  // navLinksSubNav.forEach(link => {
-  //   link.addEventListener('mouseover', () => {
-  //     header.classList.add('hover-link');
-  //   })
-  //
-  //   link.addEventListener('mouseout', () => {
-  //     header.classList.remove('hover-link');
-  //   })
-  // })
+
+  // ---Выпадающее меню-------
+  const NavList = header.querySelectorAll('.header__nav-link, .header__tel-link');
+
+  const subNavList = header.querySelectorAll('.subnav');
+
+  const overlayBg = document.querySelector('.overlay-bg');
+
+  function toggleActive (elem) {
+    elem.addEventListener('mouseover', () => {
+      overlayBg.classList.add('active');
+      document.documentElement.classList.add('js-block-scroll')
+    })
+    elem.addEventListener('mouseout', () => {
+      overlayBg.classList.remove('active');
+      document.documentElement.classList.remove('js-block-scroll')
+    })
+  }
+
+  NavList.forEach(navItem => {
+    toggleActive(navItem);
+  })
+
+  subNavList.forEach(subNavItem => {
+    toggleActive(subNavItem);
+  })
+
+
+
+
+
+
+
+
+
+
 
 
 }
