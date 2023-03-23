@@ -11,24 +11,27 @@
     .header__container::after
       opacity: 0
     .header__subnav
-      width: 100%
+      top: -1px
+      @media (min-width: $width-tablet)
+        width: 100%
+      @media (max-width: $width-mobile)
+    .header__subnav-box
       border-radius: 0
       padding: 32px 80px
       @media (max-width: $width-tablet)
         padding: 32px 50px
       @media (max-width: $width-mobile)
         padding: 32px 12px
+    .header__tel-subnav
+      bottom: -8px
   &.hover-link
     background-color: rgba(42, 40, 39, 0.35)
-
-
 
   &__container
     position: relative
     display: grid
-    grid-template-columns: repeat(3, auto)
+    grid-template-columns: min-content auto auto
     align-items: center
-    justify-content: space-between
     column-gap: 36px
     color: $text-basic
     padding-top: 16px
@@ -42,6 +45,7 @@
       grid-template-columns: repeat(2, auto)
       grid-template-rows: repeat(2, auto)
       padding-bottom: 0
+      padding-top: 12px
     &::after
       content: ""
       position: absolute
@@ -128,9 +132,9 @@
   &__nav-item:hover .header__subnav
     visibility: visible
     opacity: 1
-    //&::after
-    //  opacity: 1
-    //  visibility: visible
+    &::after
+      opacity: 1
+      visibility: visible
 
   &__nav-item--search
     display: none
@@ -209,21 +213,19 @@
   &__tel:hover .header__tel-subnav
     visibility: visible
     opacity: 1
-    //&::after
-    //  opacity: 1
-    //  visibility: visible
+    &::after
+      opacity: 1
+      visibility: visible
 
   &__tel-link
     cursor: pointer
 
+  //------header tel subnav---------
   &__tel-subnav
     position: absolute
     bottom: 1px
     transform: translateY(100%)
     right: 80px
-    border-radius: 8px
-    padding: 32px
-    background-color: $accent
     transition: $transition
     visibility: hidden
     opacity: 0
@@ -242,32 +244,23 @@
         left: 72%
       @media (max-width: 980px)
         display: none
-    //&::after
-    //  content: ""
-    //  position: absolute
-    //  background-color: rgba(42, 40, 39, 0.35)
-    //  width: 200vw
-    //  height: 100vh
-    //  top: 0
-    //  left: -2000px
-    //  z-index: -1
-    //  opacity: 0
-    //  visibility: hidden
-    //  pointer-events: none
     @media (max-width: $width-tablet)
       right: 50px
     @media (max-width: 980px)
-      bottom: -12px
       left: 50%
       right: 0
       width: calc(100% - 24px)
       transform: translateY(100%) translateX(-50%)
 
 
+
   &__tel-subnav-box
     display: flex
     flex-direction: column
     gap: 32px
+    border-radius: 8px
+    padding: 32px
+    background-color: $accent
 
   &__tel-subnav-title
     font-family: "Wremena", sans-serif
@@ -342,6 +335,14 @@
     @media (max-width: 980px)
       display: none
 
+
+  .subnav
+    @media (max-width: $width-mobile)
+      bottom: -12px
+      max-height: 75vh
+      overflow: auto
+
+
   //------header subnav---------
   &__subnav
     width: calc(100% - 160px)
@@ -349,32 +350,15 @@
     bottom: 1px
     left: 50%
     transform: translate(-50%, 100%)
-    border-radius: 8px
-    padding: 32px
-    background-color: $accent
     transition: $transition
     color: $text-basic
     opacity: 0
     visibility: hidden
     z-index: 2
-    @media (max-width: 1300px)
-      padding: 24px 32px
-    @media (max-width: $width-tablet)
+    @media (min-width: $width-tablet)
       width: calc(100% - 100px)
     @media (max-width: $width-mobile)
       width: calc(100% - 24px)
-      border-radius: 4px
-      bottom: -12px
-    &::after
-      content: ""
-      position: absolute
-      background-color: rgba(42, 40, 39, 0.35)
-      width: 120vw
-      height: 100vh
-      top: 0
-      left: -100px
-      z-index: -1
-      pointer-events: none
     &::before
       content: ""
       position: absolute
@@ -389,9 +373,12 @@
         display: none
 
   &__subnav-box
+    background-color: $accent
+    padding: 32px
     display: grid
     grid-template-columns: 19% 1fr
     grid-gap: 40px
+    border-radius: 8px
     @media (max-width: 1500px)
       grid-gap: 30px
     @media (max-width: 1300px)
@@ -401,6 +388,7 @@
     @media (max-width: $width-mobile)
       grid-template-columns: 1fr
       grid-gap: 24px
+      border-radius: 4px
 
   &__subnav-desc
     display: flex
