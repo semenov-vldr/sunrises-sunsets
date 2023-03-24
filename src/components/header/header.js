@@ -76,6 +76,7 @@ if (header) {
               if (evt.target.classList.contains('header__container') || evt.target === main) {
                 main.classList.remove('js-active');
                 SubNav.classList.remove('js-menu-active');
+                unblockScrollPage();
               }
             })
 
