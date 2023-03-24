@@ -55,32 +55,78 @@ if (header) {
 
   // ---Выпадающее меню-------
   const NavList = header.querySelectorAll('.header__nav-link, .header__tel-link');
-
   const subNavList = header.querySelectorAll('.subnav');
-
-  const overlayBg = document.querySelector('.overlay-bg');
+  const main = document.querySelector('main');
+  const widthMobile = window.matchMedia('(max-width: 768px)');
 
   function toggleActive (elem) {
-    elem.addEventListener('mouseover', () => {
-      overlayBg.classList.add('active');
-      document.documentElement.classList.add('js-block-scroll')
-    })
-    elem.addEventListener('mouseout', () => {
-      overlayBg.classList.remove('active');
-      document.documentElement.classList.remove('js-block-scroll')
-    })
+    const SubNav = elem.parentNode.querySelector('.subnav');
+    // Mobile
+    if (widthMobile.matches) {
+
+      elem.addEventListener('click', () => {
+
+        // main.classList.remove('js-active');
+        // subNavList.forEach(el => el.classList.remove('js-menu-active'));
+
+
+        if (!main.classList.contains('js-active') && !SubNav.classList.contains('js-menu-active')) {
+
+          main.classList.add('js-active');
+          SubNav.classList.add('js-menu-active');
+          blockScrollPage();
+
+        } else {
+
+          subNavList.forEach(el => el.classList.remove('js-menu-active'));
+          main.classList.remove('js-active');
+
+
+
+
+          SubNav.classList.remove('js-menu-active');
+          unblockScrollPage();
+
+        }
+
+      });
+    }
+
+
+    // Desktop
+    else {
+      elem.addEventListener('mouseover', () => {
+        main.classList.add('js-active');
+        blockScrollPage();
+      });
+      elem.addEventListener('mouseout', () => {
+        main.classList.remove('js-active');
+        unblockScrollPage();
+      });
+    }
   }
 
+
+
   NavList.forEach(navItem => {
-    toggleActive(navItem);
-  })
+    const SubNav = navItem.parentNode.querySelector('.subnav');
+    // Добавлять серую подложку только для ссылок с подменю
+    if (SubNav) {
+      toggleActive(navItem);
+    }
+  });
 
-  subNavList.forEach(subNavItem => {
-    toggleActive(subNavItem);
-  })
+
+  if (!widthMobile.matches) {
+    subNavList.forEach(subNavItem => {
+      toggleActive(subNavItem);
+    });
+  }
 
 
 
+
+  // ---Выпадающее меню END-------
 
 
 

@@ -131,12 +131,11 @@
         width: 0
         height: 0
 
-  &__nav-item:hover .header__subnav
-    visibility: visible
-    opacity: 1
-    &::after
-      opacity: 1
+
+  @media (min-width: $width-mobile)
+    &__nav-item:hover .header__subnav
       visibility: visible
+      opacity: 1
 
   &__nav-item--search
     display: none
@@ -212,12 +211,10 @@
     @media (max-width: 1100px)
       display: block
 
-  &__tel:hover .header__tel-subnav
-    visibility: visible
-    opacity: 1
-    &::after
-      opacity: 1
+  @media (min-width: $width-mobile)
+    &__tel:hover .header__tel-subnav
       visibility: visible
+      opacity: 1
 
   &__tel-link
     cursor: pointer
@@ -340,9 +337,16 @@
 
   .subnav
     @media (max-width: $width-mobile)
-      bottom: -12px
-      max-height: 75vh
+      height: 70vh
+      max-height: 70vh
       overflow: auto
+      transform: translate(-50%, 0)
+      top: 145px
+    @media (max-width: 480px)
+      top: 132px
+    &.js-menu-active
+      visibility: visible
+      opacity: 1
 
 
   //------header subnav---------
