@@ -64,34 +64,29 @@ if (header) {
     // Mobile
     if (widthMobile.matches) {
 
-      elem.addEventListener('click', () => {
+      elem.addEventListener('click', (evt) => {
 
-        // main.classList.remove('js-active');
-        // subNavList.forEach(el => el.classList.remove('js-menu-active'));
+          SubNav.classList.toggle('js-menu-active');
+
+          if (SubNav.classList.contains('js-menu-active')) {
+            main.classList.add('js-active');
+            blockScrollPage();
+
+          } else {
+            main.classList.remove('js-active');
+            unblockScrollPage();
+          }
+
+        subNavList.forEach((el => {
+          if (el !== SubNav) {
+            el.classList.remove('js-menu-active');
+          }
+        }));
 
 
-        if (!main.classList.contains('js-active') && !SubNav.classList.contains('js-menu-active')) {
-
-          main.classList.add('js-active');
-          SubNav.classList.add('js-menu-active');
-          blockScrollPage();
-
-        } else {
-
-          subNavList.forEach(el => el.classList.remove('js-menu-active'));
-          main.classList.remove('js-active');
-
-
-
-
-          SubNav.classList.remove('js-menu-active');
-          unblockScrollPage();
-
-        }
 
       });
     }
-
 
     // Desktop
     else {
