@@ -73,6 +73,15 @@ if (header) {
             main.classList.add('js-active');
             blockScrollPage();
 
+            document.addEventListener('click', (evt) => {
+              if (evt.target.classList.contains('header__container') || evt.target === main) {
+                main.classList.remove('js-active');
+                SubNav.classList.remove('js-menu-active');
+                unblockScrollPage();
+              }
+            })
+
+
           } else {
             main.classList.remove('js-active');
             unblockScrollPage();
