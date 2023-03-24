@@ -64,7 +64,7 @@ if (header) {
     // Mobile
     if (widthMobile.matches) {
 
-      elem.addEventListener('click', (evt) => {
+      elem.addEventListener('click', () => {
 
           SubNav.classList.toggle('js-menu-active');
 
@@ -78,7 +78,7 @@ if (header) {
                 SubNav.classList.remove('js-menu-active');
                 unblockScrollPage();
               }
-            })
+            });
 
 
           } else {

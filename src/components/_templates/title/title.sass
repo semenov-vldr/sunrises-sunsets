@@ -1,0 +1,84 @@
+.titles
+
+  &__container
+    padding-top: 50px
+    padding-bottom: 50px
+    display: flex
+    flex-direction: column
+    gap: 80px
+
+  &__section
+    .block--head:not(:last-child)
+      margin-bottom: 50px
+
+    & > h2
+      margin-bottom: 30px
+      text-decoration: underline
+      letter-spacing: 0.2em
+      &:not(:first-child)
+        border-top: 1px solid black
+        padding-top: 20px
+
+
+
+.block--head
+
+  h1, h2
+    font-family: "Wremena", sans-serif
+    @include fontSize(28, 56)
+    font-weight: 400
+    color: $text-basic
+    line-height: 1.1
+    text-transform: uppercase
+
+  &_subtitle
+    margin-bottom: 12px
+    @media (max-width: $width-mobile)
+      margin-bottom: 8px
+    p
+      color: $accent_1
+      text-transform: uppercase
+      font-weight: 700
+      letter-spacing: 0.1em
+      font-size: 13px
+
+  &_caption
+    margin-top: 16px
+    @media (max-width: $width-mobile)
+      margin-top: 12px
+    p
+      @include fontSize(16, 24)
+      color: rgba($text-basic, 0.6)
+      line-height: 1.45
+
+  &_title > a > h2
+    position: relative
+    display: inline-flex
+    align-items: center
+    gap: 10px
+    width: fit-content
+    &::after
+      content: ""
+      display: inline-block
+      background-image: url('../img/icons/arrow-title.svg')
+      background-repeat: no-repeat
+      background-position: center
+      background-size: cover
+      width: 16px
+      height: 20px
+      opacity: 0.8
+      transition: $transition
+      @media (max-width: $width-mobile)
+        width: 10px
+        height: 13px
+    &:hover::after
+      opacity: 1
+      transform: translateX(50%)
+
+
+
+
+
+
+
+
