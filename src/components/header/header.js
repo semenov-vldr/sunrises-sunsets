@@ -111,7 +111,6 @@ if (header) {
   }
 
 
-
   NavList.forEach(navItem => {
     const SubNav = navItem.parentNode.querySelector('.subnav');
     // Добавлять серую подложку только для ссылок с подменю
@@ -127,17 +126,7 @@ if (header) {
     });
   }
 
-
-
-
   // ---Выпадающее меню END-------
-
-
-
-
-
-
-
 
 
 }
