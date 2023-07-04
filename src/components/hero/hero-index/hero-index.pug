@@ -1,0 +1,27 @@
+section.hero-index.hero.blackout
+
+  // Картинки для слайдера
+  img.hero-index__img-hide(data-src="./assets/img/main/hero/01.jpg")
+  img.hero-index__img-hide(data-src="./assets/img/main/hero/02.jpg")
+  img.hero-index__img-hide(data-src="./assets/img/main/hero/03.jpg")
+  img.hero-index__img-hide(data-src="./assets/img/main/hero/04.jpg")
+
+  .hero-index__container.hero__container.container
+    .hero-index__body.hero__body
+      span.hero-index__subtitle добро пожаловать
+      h1.hero-index__title.hero__title Отель «Рассветы Закаты» ЖЕМЧУЖИНА КРЫМА
+      p.hero-index__text.hero__text В отеле «Рассветы Закаты» усталость сменяется расслаблением, уныние — радостью, слабость — энергией. Мы призываем гостей прочувствовать атмосферу отеля и позволить себе открывать новые увлечения, исследовать природу, наслаждаться видами и морем.
+      a.hero-index__button.button.button-outlined.button-accent.button-dark(href="#") Читать про концепцию
+
+      .hero-index__slider
+        button.hero-index__slider-prev.hero-index__slider-button
+          svg.hero-index__slider-prev-icon.hero-index__slider-arrow-icon(width="36" height="20" fill="#FFFAF4")
+            use(href='./assets/img/sprite.svg#hero-arrow')
+        button.hero-index__slider-next.hero-index__slider-button
+          svg.hero-index__slider-prev-icon.hero-index__slider-arrow-icon(width="36" height="20" fill="#FFFAF4")
+            use(href='./assets/img/sprite.svg#hero-arrow')
+        .hero-index__slider-timeline
+          .hero-index__slider-timeline-progress
+
+
+

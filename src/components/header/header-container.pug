@@ -1,0 +1,141 @@
+.header__container.container
+
+  a.header__logo(href="index.html")
+    svg.header__logo-icon.header__logo-icon--static(width="72" height="72" fill="#2A2827E5")
+      use(href='./assets/img/sprite.svg#logo-icon')
+    svg.header__logo-icon.header__logo-icon--animated(width="73" height="72" fill="#2A2827E5")
+      use(href='./assets/img/sprite.svg#logo-animated')
+    svg.header__logo-icon-mobile(width="76" height="24" fill="#2A2827E5")
+      use(href='./assets/img/sprite.svg#logo-mobile')
+
+  nav.header__nav
+    ul.header__nav-list
+      li.header__nav-item
+        a.header__nav-link(href="##") Номера
+      li.header__nav-item
+        a.header__nav-link.arrow-link(href="##") Об отеле
+        // SubNav "Об отеле"
+        .header__subnav.header__subnav--about.subnav
+          .header__subnav-box
+            .header__subnav-desc
+              h2.header__subnav-desc-title Об отеле
+              p.header__subnav-desc-text Ознакомьтесь с красотой и комфортом нашего отеля изнутри: от пышного окружения нашей роскошной территории до последних новостей и интересных событий на территории отеля.
+              a.button.button-outlined.button-primary.header__subnav-desc-button(href="##") Узнать больше
+            .header__subnav-links
+              a.header__subnav-links-item.header__subnav-links-item--w-img(href="##")
+                .header__subnav-links-item-img-box
+                  img(src="./assets/img/header/01.jpg")
+                span.header__subnav-links-item-text Территория отеля
+              a.header__subnav-links-item.header__subnav-links-item--w-img(href="##")
+                .header__subnav-links-item-img-box
+                  img(src="./assets/img/header/02.jpg")
+                span.header__subnav-links-item-text Места рядом
+              a.header__subnav-links-item.header__subnav-links-item--w-img(href="##")
+                .header__subnav-links-item-img-box
+                  img(src="./assets/img/header/03.jpg")
+                span.header__subnav-links-item-text MICE
+              a.header__subnav-links-item.header__subnav-links-item--simple(href="##")
+                span.header__subnav-links-item-text Все включено
+              a.header__subnav-links-item.header__subnav-links-item--simple(href="##")
+                span.header__subnav-links-item-text Фотогалерея
+              a.header__subnav-links-item.header__subnav-links-item--simple(href="##")
+                span.header__subnav-links-item-text Новости мероприятия
+              a.header__subnav-links-item.header__subnav-links-item--simple(href="##")
+                span.header__subnav-links-item-text Блог
+              a.header__subnav-links-item.header__subnav-links-item--simple(href="##")
+                span.header__subnav-links-item-text Вакансии
+
+
+
+      li.header__nav-item
+        a.header__nav-link.arrow-link(href="##") Инфраструктура
+        // SubNav "Инфраструктура"
+        .header__subnav.header__subnav--infrastructure.subnav
+          .header__subnav-box
+            .header__subnav-desc
+              h2.header__subnav-desc-title Инфраструктура
+              p.header__subnav-desc-text Развитая инфраструктура комплекса, обслуживание по системе «All inclusive», а также высокий уровень сервиса сделали “Рассветы Закаты” одним из самых востребованных курортов Крыма.
+              a.button.button-outlined.button-primary.header__subnav-desc-button(href="##") Узнать больше
+            .header__subnav-links
+              a.header__subnav-links-item.header__subnav-links-item--w-img(href="##")
+                .header__subnav-links-item-img-box
+                  img(src="./assets/img/header/04.jpg")
+                span.header__subnav-links-item-text Wellness
+              a.header__subnav-links-item.header__subnav-links-item--w-img(href="##")
+                .header__subnav-links-item-img-box
+                  img(src="./assets/img/header/05.jpg")
+                span.header__subnav-links-item-text Бары и рестораны
+              a.header__subnav-links-item.header__subnav-links-item--w-img(href="##")
+                .header__subnav-links-item-img-box
+                  img(src="./assets/img/header/06.jpg")
+                span.header__subnav-links-item-text Аквапарк
+              a.header__subnav-links-item.header__subnav-links-item--simple(href="##")
+                span.header__subnav-links-item-text Для детей
+              a.header__subnav-links-item.header__subnav-links-item--simple(href="##")
+                span.header__subnav-links-item-text Спорт и активный отдых
+              a.header__subnav-links-item.header__subnav-links-item--simple(href="##")
+                span.header__subnav-links-item-text Услуги и сервисы
+              a.header__subnav-links-item.header__subnav-links-item--simple(href="##")
+                span.header__subnav-links-item-text Организация мероприятий
+
+
+      li.header__nav-item
+        a.header__nav-link(href="##") Акции
+      li.header__nav-item
+        a.header__nav-link(href="##") Контакты
+      li.header__nav-item.header__nav-item--search
+        a.header__nav-link(href="##") Найти номер
+
+  .header__right-col
+    ul.header__weather
+      li.header__weather-item.header__weather-item--water
+        svg.header__weather-item-icon(width="24" height="10" fill="currentColor")
+          use(href='./assets/img/sprite.svg#weather-water')
+        span.header__weather-item-value.header__weather-item-value--water 09 °C
+
+      li.header__weather-item
+        svg.header__weather-item-icon(width="22" height="16" stroke="currentColor")
+          use(href='./assets/img/sprite.svg#weather-clouds')
+        span.header__weather-item-value.header__weather-item-value--clouds 24 °C
+
+      li.header__weather-item.header__weather-item--sun-moon
+        svg.header__weather-item-icon.header__weather-item-icon--sun(width="40" height="40" stroke="currentColor")
+          use(href='./assets/img/sprite.svg#weather-sun')
+        svg.header__weather-item-icon.header__weather-item-icon--moon(width="13" height="14" stroke="currentColor" style="display: none")
+          use(href='./assets/img/sprite.svg#weather-moon')
+
+    .header__tel
+      .header__tel-link
+        span.arrow-link.header__tel-link-text 8 800 3333 125
+        svg.header__tel-icon(width="18" height="18" stroke="currentColor")
+          use(href='./assets/img/sprite.svg#phone')
+      .header__tel-subnav.subnav
+        .header__tel-subnav-box
+          h2.header__tel-subnav-title Телефоны
+          ul.header__tel-subnav-list
+            li.header__tel-subnav-item
+              span.header__tel-subnav-item-title Бесплатно по РФ:
+              a.header__tel-subnav-item-tel(href="tel:88003333125") +7 800 3333 125
+            li.header__tel-subnav-item
+              span.header__tel-subnav-item-title Для звонков в Крыму:
+              a.header__tel-subnav-item-tel(href="tel:+79789570707") +7 978 957 07 07
+            li.header__tel-subnav-item
+              span.header__tel-subnav-item-title Для звонков из Москвы:
+              a.header__tel-subnav-item-tel(href="tel:+74996478123") +7 499 647 81 23
+            li.header__tel-subnav-item
+              span.header__tel-subnav-item-title Отдел продаж:
+              a.header__tel-subnav-item-tel(href="tel:+79789570707") +7 978 957 07 07
+            li.header__tel-subnav-item
+              span.header__tel-subnav-item-title Туроператорам:
+              a.header__tel-subnav-item-tel(href="tel:+74996478123") +7 499 647 81 23
+            li.header__tel-subnav-item
+              span.header__tel-subnav-item-title Вакансии:
+              a.header__tel-subnav-item-tel(href="tel:+79789140070") +7 978 914 00 70
+
+          button.button.button-outlined.button-primary.header__tel-subnav-button заказать звонок
+
+
+    a.button.button-filled.button-accent.header__button-search(href="##") Найти номер
+
+
+

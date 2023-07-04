@@ -1,0 +1,59 @@
+.hero-index
+
+  &__img-hide
+    display: none
+
+  &__subtitle
+    color: $accent_1
+    text-transform: uppercase
+    font-weight: bold
+    font-family: "CoFoSans", sans-serif
+    @include fontSize(13, 16)
+    @media (max-width: $width-mobile)
+      display: none
+
+  &__slider
+    display: flex
+    gap: 40px
+    align-items: center
+    &-button
+      display: flex
+      align-items: center
+      cursor: pointer
+      height: 48px
+      width: 48px
+      border-radius: 4px
+      transition: $transition
+      &:hover
+        background-color: rgba(#fff, 0.05)
+      &:active
+        background-color: rgba(#fff, 0.2)
+    &-next
+      transform: rotate(180deg)
+    @media (max-width: $width-mobile)
+      order: -1
+
+
+    &-timeline
+      position: relative
+      width: 100%
+      height: 2px
+      background-color: rgba($bg-base, 0.35)
+      &-progress
+        transition: 0.5s ease
+        position: absolute
+        width: 0
+        height: 100%
+        background-color: $bg-base
+      @media (max-width: $width-mobile)
+        display: none
+
+  &__button.button
+    display: inline-block
+    text-align: center
+    @media (min-width: $width-mobile)
+      margin-bottom: 56px
+    @media (max-width: $width-mobile)
+      width: 100%
+
+

@@ -1,15 +1,40 @@
 .header
-  position: sticky
+  //position: sticky
+  position: fixed
   width: 100%
   z-index: 20
   top: 0
   transition: 0.5s ease
+
+  &.transparent
+    .header__container
+      color: $text-light
+      &::after
+        background-color: rgba(#FFFCFA, 0.35)
+    .header__logo-icon,
+    .header__logo-icon-mobile
+      fill: $text-light
+    .header__nav
+      &::after,
+      &::before
+        background-color: rgba(#FFFCFA, 0.35)
+
+
   &.js-scroll
     transform: translateY(-100%)
   &.js-scroll-bg
     background-color: $bg-accent
+    .header__container
+      color: $text-basic
     .header__container::after
       opacity: 0
+    .header__logo-icon,
+    .header__logo-icon-mobile
+      fill: #2A2827E5
+    .header__nav
+      &::after,
+      &::before
+        background-color: #2A28271F
     .header__subnav
       @media (min-width: $width-tablet)
         width: 100%
@@ -28,13 +53,15 @@
   &.hover-link
     background-color: rgba(42, 40, 39, 0.35)
 
+
+
   &__container
     position: relative
     display: grid
     grid-template-columns: min-content auto auto
     align-items: center
     column-gap: 36px
-    color: $text-basic
+    //color: $text-basic
     padding-top: 16px
     padding-bottom: 16px
     white-space: nowrap
@@ -62,6 +89,7 @@
         width: calc(100% - 100px)
       @media (max-width: 980px)
         display: none
+
 
   &__logo
     display: flex
@@ -137,7 +165,6 @@
         padding-right: 0
 
 
-
   @media (min-width: $width-mobile)
     &__nav-item:hover .header__subnav
       visibility: visible
@@ -166,7 +193,6 @@
       width: 100%
     &.arrow-link:hover::before
       width: calc(100% - 30px)
-
 
 
 

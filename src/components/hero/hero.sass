@@ -1,0 +1,59 @@
+.hero
+  position: relative
+  min-height: 100vh
+  height: 100%
+  background-position: center
+  background-size: cover
+  background-repeat: no-repeat
+  &.blackout::after
+    content: ""
+    position: absolute
+    width: 100%
+    height: 100%
+    background: rgb(40,40,40)
+    background: linear-gradient(180deg, rgba(40,40,40,1) 0%, rgba(40,40,40,0) 20%, rgba(40,40,40,0) 50%, rgba(40,40,40,1) 100%)
+    left: 0
+    top: 0
+
+
+  &__container
+    position: relative
+    z-index: 1
+    padding-top: 110px
+    padding-bottom: 64px
+    color: $text-light
+    @media (max-width: $width-mobile)
+      padding-bottom: 24px
+      padding-top: 120px
+
+  &__body
+    height: calc(100vh - 174px)
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+    width: 60%
+    @media (max-width: $width-tablet)
+      width: 80%
+    @media (max-width: $width-mobile)
+      height: calc(100vh - 144px)
+      width: initial
+
+  &__title
+    text-transform: uppercase
+    font-family: 'Wremena', sans-serif
+    @include fontSize(28, 56)
+    line-height: 1.2
+    margin-bottom: 16px
+    @media (max-width: $width-mobile)
+      margin-bottom: 12px
+
+  &__text
+    @include fontSize(16, 24)
+    margin-bottom: 56px
+    @media (max-width: $width-mobile)
+      margin-bottom: 32px
+      overflow: hidden
+      display: -webkit-box
+    -webkit-line-clamp: 3
+    -webkit-box-orient: vertical
+
